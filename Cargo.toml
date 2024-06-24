@@ -12,7 +12,6 @@ keywords = ["proc-macro", "serialization", "enum"]
 categories = [
     "development-tools",
     "no-std",
-    "no-std::no-alloc",
     "rust-patterns",
     "value-formatting",
     "text-processing",
