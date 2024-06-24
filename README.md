@@ -1,15 +1,15 @@
-# `strenum`
+# `serenum`
 
 ## Example usage
 
 Source code:
 
 ```rust
-#[derive(StrEnum)]
+#[derive(SerEnum)]
 pub enum Order {
-    #[strenum(text = "full")]
+    #[serenum(text = "full")]
     Full,
-    #[strenum(text = "short")]
+    #[serenum(text = "short")]
     Short,
 }
 assert_eq!(Order::Full.text(), "full");

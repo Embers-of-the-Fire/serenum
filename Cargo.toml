@@ -1,12 +1,12 @@
 [package]
-name = "strenum"
+name = "serenum"
 version = "0.1.0"
 edition = "2021"
 authors = ["Embers-of-the-Fire <stellarishs@163.com>"]
 license = "MIT OR Apache-2.0"
 description = "Generate string representation for a enum."
-repository = "https://github.com/embers-of-the-fire/strenum.git"
-homepage = "https://github.com/embers-of-the-fire/strenum/"
+repository = "https://github.com/embers-of-the-fire/serenum.git"
+homepage = "https://github.com/embers-of-the-fire/serenum/"
 readme = "README.md"
 keywords = ["proc-macro", "serialization", "enum"]
 categories = [

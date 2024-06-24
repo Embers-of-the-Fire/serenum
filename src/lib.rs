@@ -1,15 +1,15 @@
-//! # `strenum`
+//! # `serenum`
 //! 
 //! ## Example usage
 //! 
 //! Source code:
 //! 
 //! ```rust
-//! #[derive(StrEnum)]
+//! #[derive(SerEnum)]
 //! pub enum Order {
-//!     #[strenum(text = "full")]
+//!     #[serenum(text = "full")]
 //!     Full,
-//!     #[strenum(text = "short")]
+//!     #[serenum(text = "short")]
 //!     Short,
 //! }
 //! assert_eq!(Order::Full.text(), "full");
@@ -96,8 +96,8 @@ use syn::{parse_macro_input, DeriveInput};
 
 mod codegen;
 
-#[proc_macro_derive(StrEnum, attributes(strenum))]
-pub fn strenum(input: TokenStream) -> TokenStream {
+#[proc_macro_derive(SerEnum, attributes(serenum))]
+pub fn serenum(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
     let cfg = match Config::from_derive_input(&input) {
         Ok(cfg) => cfg,

@@ -1,12 +1,12 @@
-use strenum::StrEnum;
+use serenum::SerEnum;
 
 #[test]
 fn test_macro() {
-    #[derive(StrEnum)]
+    #[derive(SerEnum)]
     pub enum Order {
-        #[strenum(text = "full")]
+        #[serenum(text = "full")]
         Full,
-        #[strenum(text = "short")]
+        #[serenum(text = "short")]
         Short,
     }
 

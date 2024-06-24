@@ -5,7 +5,7 @@ use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
 
 #[derive(FromDeriveInput)]
-#[darling(attributes(strenum), supports(enum_unit))]
+#[darling(attributes(serenum), supports(enum_unit))]
 pub struct Config {
     ident: syn::Ident,
     data: darling::ast::Data<VariantConfig, ()>,
@@ -16,7 +16,7 @@ pub struct Config {
 }
 
 #[derive(FromVariant)]
-#[darling(attributes(strenum))]
+#[darling(attributes(serenum))]
 pub struct VariantConfig {
     ident: syn::Ident,
     text: String,
