@@ -1,0 +1,37 @@
+[package]
+name = "strenum"
+version = "0.1.0"
+edition = "2021"
+authors = ["Embers-of-the-Fire <stellarishs@163.com>"]
+license = "MIT OR Apache-2.0"
+description = "Generate string representation for a enum."
+repository = "https://github.com/embers-of-the-fire/strenum.git"
+homepage = "https://github.com/embers-of-the-fire/strenum/"
+readme = "README.md"
+keywords = ["proc-macro", "serialization", "enum"]
+categories = [
+    "development-tools",
+    "no-std",
+    "no-std::no-alloc",
+    "rust-patterns",
+    "value-formatting",
+    "text-processing",
+]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+convert_case = "0.6.0"
+darling = "0.20.9"
+itertools = "0.13.0"
+proc-macro2 = "1.0.86"
+quote = "1.0.36"
+syn = { version = "2.0.68", features = ["derive"] }
+
+[features]
+default = ["serde"]
+serde = []
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
